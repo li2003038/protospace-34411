@@ -15,7 +15,7 @@ class PrototypesController < ApplicationController
     if prototype.save
       redirect_to root_path
     else
-      render :new
+      redirect_to new_prototype_path
     end
   end
 
@@ -35,7 +35,7 @@ class PrototypesController < ApplicationController
     if prototype.update(prototype_params)
       redirect_to prototype_path
     else
-      render :edit
+      redirect_to new_prototype_path
     end
   end
 
